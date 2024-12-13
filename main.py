@@ -1,5 +1,6 @@
 import sys
 import pygame
+import random
 
 from eva import eva_paint
 from misha import misha_paint
@@ -7,6 +8,7 @@ from danil import danil_paint
 from kirill import kirill_paint
 from amirkhan import amirkhan_paint
 
+functions =[eva_paint, misha_paint, danil_paint, kirill_paint, amirkhan_paint]
 
 def main():
     pygame.init()
@@ -28,10 +30,10 @@ def main():
             if event.type == pygame.QUIT:
                 running = False
             if event.type == pygame.MOUSEBUTTONDOWN:
-                pos = pygame.mouse.get_pos()
-                color = image_mask.get_at(pos)[:3]
+                x, y = pygame.mouse.get_pos()
+                color = image_mask.get_at((x, y))[:3]
                 if color == (255, 0, 0):
-                    print("True")
+                    random.choice(functions)(screen,x, y)
                     #функция
 
             
