@@ -1,6 +1,12 @@
 import sys
 import pygame
 
+from eva import eva_paint
+from misha import misha_paint
+from danil import danil_paint
+from kirill import kirill_paint
+from amirkhan import amirkhan_paint
+
 
 def main():
     pygame.init()
