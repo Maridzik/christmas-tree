@@ -25,7 +25,8 @@ def main():
                 pos = pygame.mouse.get_pos()
                 color = image_mask.get_at(pos)[:3]
                 if color == (255, 0, 0):
-                    pass #функция
+                    print("True")
+                    #функция
 
             
 
